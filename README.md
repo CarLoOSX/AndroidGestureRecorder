@@ -1,4 +1,4 @@
-# AndroidGestureRecorder
+# GestureRecorder
 
 A part for Vibrations Game.
 
