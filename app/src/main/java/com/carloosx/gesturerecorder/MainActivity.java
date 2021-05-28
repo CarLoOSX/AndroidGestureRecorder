@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements DialogResultListe
         set.setFillAlpha(65);
         set.setFillColor(ColorTemplate.getHoloBlue());
         set.setHighLightColor(Color.WHITE);
-        set.setHighlightLineWidth(1.5f);
+        set.setHighlightLineWidth(1.3f);
         set.setValueTextColor(Color.WHITE);
         set.setValueTextSize(9f);
         set.setDrawValues(false);
