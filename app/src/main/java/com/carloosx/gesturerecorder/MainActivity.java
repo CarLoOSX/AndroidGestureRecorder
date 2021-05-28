@@ -131,7 +131,10 @@ public class MainActivity extends AppCompatActivity implements DialogResultListe
             switch (v.getId()) {
                 case R.id.toggleRec:
                     if (recStarted) stopRecInt();
-                    else startRec();
+                    else {
+                        startRec();
+                        spinLabels.setSelection(0);
+                    }
                     break;
             }
         }
@@ -370,6 +373,14 @@ public class MainActivity extends AppCompatActivity implements DialogResultListe
     private void moveSelectionToNext() {
         int current = selectedEntryIndex != -1 ? selectedEntryIndex : 0;
         current += GESTURE_SAMPLES;
+
+        int selectedLabel = spinLabels.getSelectedItemPosition();
+
+        if (selectedLabel != spinLabels.getCount()-1) {
+           int selected= selectedLabel+1;
+            spinLabels.setSelection(selected);
+        }
+
 
         ILineDataSet dataSet = getLineData().getDataSetByIndex(0);
         while (current < dataSet.getEntryCount()) {
